@@ -1,0 +1,27 @@
+{
+  "name": "iot-project",
+  "version": "0.1.0",
+  "description": "The Node JS IOT project ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aamozhegov/uniProject.git"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "iot"
+  ],
+  "author": "Artem Mozhegov <amozhegov@yahoo.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aamozhegov/uniProject/issues"
+  },
+  "homepage": "https://github.com/aamozhegov/uniProject#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
