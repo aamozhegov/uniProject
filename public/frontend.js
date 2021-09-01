@@ -17,6 +17,12 @@ new Vue({
 			this.contacts.push({...contact, id: Date.now()})
 
 			this.form.name = this.form.value = "" 
+		},
+		markContact(id) {
+			console.log(id)
+		},
+		removeContact(id) {
+
 		}
 	}
 })
