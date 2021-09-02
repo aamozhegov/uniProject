@@ -11,6 +11,11 @@ new Vue({
 			contacts: []
 		}
 	},
+	computed: {
+		canCreate() {
+			return this.form.value.trim() && this.form.name.trim()
+		}
+	},
 	methods: {
 		createContact() {
 			const {...contact} = this.form
