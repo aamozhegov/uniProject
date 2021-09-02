@@ -8,7 +8,9 @@ new Vue({
 				name: "",
 				value: ""
 			},
-			contacts: []
+			contacts: [
+				
+			]
 		}
 	},
 	computed: {
@@ -19,15 +21,16 @@ new Vue({
 	methods: {
 		createContact() {
 			const {...contact} = this.form
-			this.contacts.push({...contact, id: Date.now()})
+			this.contacts.push({...contact, id: Date.now(), marked: false)}
 
 			this.form.name = this.form.value = "" 
 		},
 		markContact(id) {
-			console.log(id)
+			const contact = this.contacts.find(c => c.id === id)
+			contact.marked = true
 		},
 		removeContact(id) {
-
+			this.contacts = this.contacts.filter(c => c.id !== id) 
 		}
 	}
 })

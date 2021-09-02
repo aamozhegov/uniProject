@@ -1,23 +1,24 @@
 <!<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="styles.css ">
-	<title> Home page</title>
+	<title>Uni project</title>
 	<style type="text/css">
-		[v-cloak] {
-			display: none;
-		}
+
 	</style>
 </head>
 <body>
 
-
+<!-- 		[v-cloak] {
+			display: none;
+		} 
+-->
 
   
 
-	<div class="container pt-3" id="app" v-cloak>
+	<div class="container pt-3" id="app">
 		<h1>Internet of things project</h1>
 		<form class="form-inline mb-3" @submit.prevent="createContact">
 		 	<div class="form-group mr-5">
@@ -34,9 +35,9 @@
 		<div v-if="contacts.length">
 			<div class="card mb-3" v-for="contact in contacts">
 			 	<div class="card-body">
-			 		<h5 class="card-title"> {{contact.name}}</h5>
+			 		<h5 class="card-title" :style="{color: contact.marked ? 'red' : 'black'}">{{contact.name}}</h5>
 			 		<p class="card-text">{{contact.value}}</p>
-			 		<button class="btn btn-primary" @click="markContact(contact.id)">Mark</button>
+			 		<button class="btn btn-primary" @click="markContact(contact.id)" :disabled="contact.marked">Mark</button>
 			 		<button class="btn btn-danger" @click="removeContact(contact.id)">Delete</button>
 			 	</div>
 			</div>
